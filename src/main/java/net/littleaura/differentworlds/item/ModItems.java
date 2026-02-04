@@ -14,9 +14,6 @@ public class ModItems {
 
     public static final Item MOONLIT_JADE_SHARD = register("moonlit_jade_shard", Item::new, new Item.Properties());
 
-
-
-
     public static <GenericItem extends Item> GenericItem register(String name, Function<Item.Properties, GenericItem> itemFactory, Item.Properties settings) {
         // Create the item key.
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(DifferentWorlds.MOD_ID, name));
