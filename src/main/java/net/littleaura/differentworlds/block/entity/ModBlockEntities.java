@@ -16,8 +16,6 @@ public class ModBlockEntities {
     public static final BlockEntityType<EnergyVesselBlockEntity> ENERGY_VESSEL_BLOCK_ENTITY =
             register("energy_vessel", EnergyVesselBlockEntity::new, ModBlocks.ENERGY_VESSEL);
 
-
-
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
             FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory,
@@ -28,6 +26,6 @@ public class ModBlockEntities {
     }
 
     public static void initialize() {
-
+        DifferentWorlds.LOGGER.info("Registering ModBlockEntities for Mod: " + DifferentWorlds.MOD_ID);
     }
 }

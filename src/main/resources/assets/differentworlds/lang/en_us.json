@@ -1,5 +1,7 @@
 {
-  "item.differentworlds.moonlit_jade_shard": "Moonlit Jade Shard",
+  "item.differentworlds.moonlit_jade": "Moonlit Jade",
 
-  "block.differentworlds.energy_vessel": "Energy Vessel"
+  "block.differentworlds.energy_vessel": "Energy Vessel",
+
+  "itemGroup.differentworlds.all": "Different Worlds"
 }

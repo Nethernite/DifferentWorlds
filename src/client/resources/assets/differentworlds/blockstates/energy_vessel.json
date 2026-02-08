@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "activated=false": {
+      "model": "differentworlds:block/energy_vessel"
+    },
+    "activated=true": {
+      "model": "differentworlds:block/energy_vessel_on"
+    }
+  }
+}

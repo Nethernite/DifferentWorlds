@@ -19,9 +19,10 @@ public class ModBlocks {
 
     public static final Block ENERGY_VESSEL = register(
             "energy_vessel",
-            Block::new,
+            EnergyVesselBlock::new,
             BlockBehaviour.Properties.of()
-                    .sound(SoundType.GLASS),
+                    .sound(SoundType.LANTERN)
+                    .lightLevel(EnergyVesselBlock::getLuminance),
             true
     );
 
@@ -53,7 +54,7 @@ public class ModBlocks {
     }
 
     public static void initialize() {
-
+        DifferentWorlds.LOGGER.info("Registering ModBlocks for Mod: " + DifferentWorlds.MOD_ID);
     }
 
 }

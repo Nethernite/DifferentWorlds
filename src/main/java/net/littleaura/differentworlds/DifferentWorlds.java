@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.littleaura.differentworlds.block.ModBlocks;
 import net.littleaura.differentworlds.block.entity.ModBlockEntities;
+import net.littleaura.differentworlds.component.ModDataComponentTypes;
 import net.littleaura.differentworlds.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,5 +22,6 @@ public class DifferentWorlds implements ModInitializer {
 		ModItems.initialize();
 		ModBlocks.initialize();
 		ModBlockEntities.initialize();
+		ModDataComponentTypes.initialize();
 	}
 }
