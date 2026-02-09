@@ -2,8 +2,15 @@ package net.littleaura.differentworlds.component.custom;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.component.DataComponentGetter;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipProvider;
 
-public record EnergyStorage(int max_energy, int stored_energy, String energy_type) {
+import java.util.function.Consumer;
+
+public record EnergyStorage(int max_energy, int stored_energy, String energy_type) implements TooltipProvider {
 
     public static final Codec<EnergyStorage> CODEC = RecordCodecBuilder.create(builder -> {
         return builder.group(
@@ -12,4 +19,10 @@ public record EnergyStorage(int max_energy, int stored_energy, String energy_typ
                 Codec.STRING.optionalFieldOf("energy_type", "").forGetter(EnergyStorage::energy_type)
         ).apply(builder, EnergyStorage::new);
     });
+    public static final EnergyStorage EMPTY = new EnergyStorage(0,0,"");
+
+    @Override
+    public void addToTooltip(Item.TooltipContext tooltipContext, Consumer<Component> consumer, TooltipFlag tooltipFlag, DataComponentGetter dataComponentGetter) {
+
+    }
 }
