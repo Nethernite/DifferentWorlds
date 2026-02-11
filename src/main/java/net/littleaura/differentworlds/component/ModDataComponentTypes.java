@@ -1,5 +1,6 @@
 package net.littleaura.differentworlds.component;
 
+import net.fabricmc.fabric.api.item.v1.ComponentTooltipAppenderRegistry;
 import net.littleaura.differentworlds.DifferentWorlds;
 import net.littleaura.differentworlds.component.custom.EnergyStorage;
 import net.minecraft.core.Registry;
@@ -17,5 +18,6 @@ public class ModDataComponentTypes {
 
     public static void initialize() {
         DifferentWorlds.LOGGER.info("Registering ModDataComponentsTypes for Mod: " + DifferentWorlds.MOD_ID);
+        ComponentTooltipAppenderRegistry.addFirst(ModDataComponentTypes.ENERGY_STORAGE);
     }
 }

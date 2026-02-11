@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipProvider;
 
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public record EnergyStorage(int max_energy, int stored_energy, String energy_type) implements TooltipProvider {
@@ -23,6 +24,9 @@ public record EnergyStorage(int max_energy, int stored_energy, String energy_typ
 
     @Override
     public void addToTooltip(Item.TooltipContext tooltipContext, Consumer<Component> consumer, TooltipFlag tooltipFlag, DataComponentGetter dataComponentGetter) {
-
+        consumer.accept(Component.translatable("container.differentworlds.energy_storage.values", this.stored_energy, this.max_energy));
+        if (!Objects.equals(this.energy_type, "")) {
+            consumer.accept(Component.translatable("container.differentworlds.energy_storage.type", this.energy_type));
+        }
     }
 }

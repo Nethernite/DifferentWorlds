@@ -3,5 +3,8 @@
 
   "block.differentworlds.energy_vessel": "Energy Vessel",
 
-  "itemGroup.differentworlds.all": "Different Worlds"
+  "itemGroup.differentworlds.all": "Different Worlds",
+
+  "container.differentworlds.energy_storage.values": "Energy: %1$s / %2$s",
+  "container.differentworlds.energy_storage.type": "Type: %1$s"
 }
